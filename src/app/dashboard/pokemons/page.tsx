@@ -8,7 +8,7 @@ import axios from 'axios';
 
 const getPokemns = async (limit = 20, offset = 0): Promise<SimplePokemon[]> => {
    
-        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=0`);
+        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
         let newData: PokemonsResponse = response.data;
         const pokemons = newData.results.map((pokemon) => ({
             id: pokemon.url.split('/').at(-2)!,
