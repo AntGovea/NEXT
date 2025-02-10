@@ -16,11 +16,9 @@ const initialState: CounterState = {
 
 const counterSlice = createSlice({
   name: 'counter',
-
   initialState,
-
   reducers: {
-    initCounter(state,action:PayloadAction<number>){
+    initCounterState(state,action:PayloadAction<number>){
       if (state.isReady) {
         return
       }
@@ -50,6 +48,10 @@ const counterSlice = createSlice({
   }
 });
 
-export const { incrementOne,decrementOne,resetCount} = counterSlice.actions;
+export const { incrementOne,decrementOne,resetCount,initCounterState} = counterSlice.actions;
 
 export default counterSlice.reducer;
+
+
+
+
