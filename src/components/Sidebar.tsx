@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { IoBrowsersOutline, IoCalculator, IoEarthSharp, IoFootball, IoHeartCircleSharp, IoLogoReact } from 'react-icons/io5'
 import { SidebarMenuItem } from './SidebarMenuItem'
+import { BiHeartCircle } from 'react-icons/bi'
 
 export const Sidebar = () => {
 
