@@ -13,7 +13,7 @@ export const PokemonCard = ({ pokemon }: Props) => {
 
     const { id, name } = pokemon;
 
-    const isFavorite = useAppSelector(state => !!state.pokemons[id])
+    const isFavorite = useAppSelector(state => !!state.pokemons.favorites[id])
     // console.log(isFavorite)
     const dispatch = useAppDispatch();
     const onToggle = () => {
@@ -33,6 +33,7 @@ export const PokemonCard = ({ pokemon }: Props) => {
                             width={100}
                             height={100}
                             alt={pokemon.name}
+                            
                             priority={false}
                         />
                         <p className="pt-2 text-lg font-semibold text-gray-50 capitalize">{name}</p>

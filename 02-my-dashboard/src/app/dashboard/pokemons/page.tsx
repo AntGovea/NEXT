@@ -34,7 +34,10 @@ async function pokemonsPage() {
         <div className="flex flex-col ">
             <span className='text-5xl my-2'>Listado de Pokémons <small>estatico</small></span>
         
+        {
             <PokemonsGrid pokemons={pokemons} />
+
+        }
         </div>
     )
 
