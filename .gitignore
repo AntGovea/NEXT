@@ -1,9 +1,10 @@
 /postgres
-/03-admin-todos/postgres
-/03-admin-todos/.next/
-/03-admin-todos/node_modules
-/*/node_modules
-/*/.next
+/node_modules
+.next
+.vscode
+/03-admin-todos/postgres/
+/03-admin-todos/prisma/migrations/20250319232731_/
+
 
 
 

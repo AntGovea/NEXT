@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "194ff30d-5fb2-4d5b-8de0-fbd5585a8058",
+		"name": "next",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40340314"
+	},
+	"item": [
+		{
+			"name": "seed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{myHost}}:3000/api/seed",
+					"protocol": "http",
+					"host": [
+						"{{myHost}}"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"seed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllTodos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{myHost}}:3000/api/todos?take=2&skip=2",
+					"protocol": "http",
+					"host": [
+						"{{myHost}}"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"todos"
+					],
+					"query": [
+						{
+							"key": "take",
+							"value": "2"
+						},
+						{
+							"key": "skip",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTodoById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{myHost}}:3000/api/todos/0c82b397-880f-481c-bbcd-02836f702f1a",
+					"protocol": "http",
+					"host": [
+						"{{myHost}}"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"todos",
+						"0c82b397-880f-481c-bbcd-02836f702f1a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTodoById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"complete\":true,\r\n    \"description\":\"Desde el endpoint\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{myHost}}:3000/api/todos/0c82b397-880f-481c-bbcd-02836f702f1a",
+					"protocol": "http",
+					"host": [
+						"{{myHost}}"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"todos",
+						"0c82b397-880f-481c-bbcd-02836f702f1a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTodo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/reader-result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"reader-result"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "myHost",
+			"value": "127.0.0.1",
+			"type": "default"
+		}
+	]
+}
