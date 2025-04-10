@@ -56,7 +56,7 @@ export async function POST(request: Request) {
         let { description, complete } = await postSchema.validate(await request.json());
         let data = await prisma.tODO.create({
             data: {
-                description,
+                description, 
                 complete,
             }
         });
