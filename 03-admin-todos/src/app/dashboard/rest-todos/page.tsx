@@ -1,5 +1,6 @@
 import prisma from "@/lib/prisma";
 import { TodoGrid } from "@/todos/components";
+import { NewTodo } from "@/todos/components/NewTodo";
 
 
 export const metadata = {
@@ -17,7 +18,10 @@ export default async function RestTodosPage() {
                 {JSON.stringify(todos)}
 
             </h1> */}
-            <TodoGrid todos={todos}/>
+            <div className="w-full px-6 mb-5 ">
+                <NewTodo />
+            </div>
+            <TodoGrid todos={todos} />
         </div>
     )
 }
