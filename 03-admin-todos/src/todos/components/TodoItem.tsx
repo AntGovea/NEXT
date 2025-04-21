@@ -2,7 +2,6 @@
 import { TODO } from "@prisma/client"
 import styles from "./TodoItem.module.css"
 import { IoCheckboxOutline, IoSquareOutline } from "react-icons/io5"
-import { useRouter } from "next/navigation";
 
 interface Props {
   todo: TODO,
@@ -36,7 +35,7 @@ export const TodoItem = ({ todo, toggleTodo }: Props) => {
         <div className="text-cente sm:text-left">
 
           {`
-        $  {todo.id}
+        ${todo.id}
         ${todo.description}
         ${todo.createdAt}
         ${todo.complete}
