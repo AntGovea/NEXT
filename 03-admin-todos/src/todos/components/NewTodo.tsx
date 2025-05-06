@@ -2,8 +2,9 @@
 
 import { FormEvent, useState } from "react";
 import { IoTrashOutline } from "react-icons/io5";
-import * as todoApi from '@/todos/helpers/todos'
 import { useRouter } from "next/navigation";
+import { addTodo, deteleCompleted } from "../actions/todo-actions";
+// import * as todoApi from '@/todos/helpers/todos'
 
 export const NewTodo = () => {
 
@@ -17,19 +18,19 @@ export const NewTodo = () => {
     if (description.trim().length === 0) return;
     console.log('form-submited', description);
 
-    const newTodo = await todoApi.createTodo(description);
+   await addTodo(description);
     router.refresh();
     setDescription('')
   }
 
 
-  const deleteCompleted = async (e: any) => {
-    e.preventDefault();
-    console.log('delete completes');
-    await todoApi.deleteCompleteTodo();
-    router.refresh();
+  // const deleteCompleted = async (e: any) => {
+    // e.preventDefault();
+    // console.log('delete completes');
+    // await todoApi.deleteCompleteTodo();
+    // router.refresh();
 
-  }
+  // }
 
 
   return (
@@ -50,7 +51,7 @@ export const NewTodo = () => {
       <span className='flex flex-1'></span>
 
       <button
-        onClick={(e) => deleteCompleted(e)}
+        onClick={deteleCompleted}
         type='button' className="flex items-center justify-center rounded ml-2 bg-red-400 p-2 text-white hover:bg-red-700 transition-all">
         <IoTrashOutline />
         Delete
