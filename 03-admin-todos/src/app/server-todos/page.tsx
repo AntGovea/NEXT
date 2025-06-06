@@ -1,3 +1,7 @@
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+
 import prisma from "@/lib/prisma";
 import { TodoGrid } from "@/todos/components";
 import { NewTodo } from "@/todos/components/NewTodo";
@@ -13,7 +17,7 @@ export default async function ServerTodosPage() {
 
     return (
         <>
-    <span className="text-3xl mb-10">Server Actions</span>
+            <span className="text-3xl mb-10">Server Actions</span>
             {/* <h1 className="text-5xl">
                 {JSON.stringify(todos)}
 
