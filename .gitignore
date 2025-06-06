@@ -60,5 +60,9 @@ node_modules/
 **/.next/
 **/node_modules/
 .vscode/
+<<<<<<< HEAD
 >>>>>>>> 6943b17 (fix: git ignore):.gitignore
 >>>>>>> 6943b17 (fix: git ignore)
+=======
+**/.vscode/
+>>>>>>> d063523 (fix(shopping): fix reflog shopping cart)
