@@ -1,0 +1,1 @@
+export {ItemCard} from '@/shoopping-cart/components/ItemCard'
