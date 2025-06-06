@@ -1,0 +1,12 @@
+# PostgreSQL data
+03-admin-todos/postgres/
+
+# Node
+node_modules/
+.env
+*.log
+
+# Otros
+.DS_Store
+**/.env.*
+**/.next
