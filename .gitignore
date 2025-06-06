@@ -4,7 +4,8 @@
 .vscode
 /03-admin-todos/postgres/
 /03-admin-todos/prisma/migrations/20250319232731_/
-
+next-env.d.ts
+**/.env.*
 
 
 
@@ -51,4 +52,3 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
