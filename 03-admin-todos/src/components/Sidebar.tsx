@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { CiLogout } from 'react-icons/ci';
+<<<<<<< HEAD
 import { SidebarItem } from './SideBarItem';
+=======
+import { SidebarItem } from './SidebarItem';
+>>>>>>> fabe85a (fix: conflicts)
 import { IoAddCircleSharp, IoBagAddOutline, IoCalendarOutline, IoCheckboxOutline, IoListOutline } from 'react-icons/io5';
 
 const menuItems = [
