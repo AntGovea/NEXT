@@ -17,7 +17,6 @@ export default async function DashboardPage() {
     return (
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2">
 
-<<<<<<< HEAD
             <WidgetItem title='Usuario conectado S-side' children={<>
 
                 <div className="flex flex-col">
@@ -27,9 +26,6 @@ export default async function DashboardPage() {
 
                 </div>
             </>} />
-=======
-            {/* <WidgetItem title='' children={<></>}/> */}
->>>>>>> fabe85a (fix: conflicts)
 
         </div>
     )
