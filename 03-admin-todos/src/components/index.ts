@@ -1,4 +1,5 @@
-export { Sidebar } from '@/components/Sidebar'
+export { Sidebar } from '@/components/sidebar/Sidebar'
+export { LogoutButton } from '@/components/sidebar/LogoutButton'
 export { TopMenu } from '@/components/TopMenu'
 export { WidgetItem } from '@/components/WidgetItem'
 export { TabBar } from '@/components/TabBar'
