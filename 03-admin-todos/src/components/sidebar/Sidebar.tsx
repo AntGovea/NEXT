@@ -46,7 +46,7 @@ export const Sidebar = async () => {
 
   const session = await getServerSession(authOptions)
 
-  const avatarUrl = session?.user?.image ? session.user.image : 'image other side'
+  const avatarUrl = session?.user?.image ? session.user.image : '/no image.png'
   const userName = session?.user?.name ?? 'No Name';
   const userRoles=session?.user?.roles??['client'];
 
@@ -62,7 +62,7 @@ export const Sidebar = async () => {
           <Link href="#" title="home">
             {/* Next/Image */}
             <Image
-              src={avatarUrl}
+              src={ avatarUrl}
               className="w-32"
               alt="tailus logo"
               width={150}

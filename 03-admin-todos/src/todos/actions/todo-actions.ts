@@ -16,12 +16,12 @@ export const sleep = async (seconds: number = 0) => (
 export const toggleTodo = async (id: string, complete: boolean): Promise<TODO> => {
     await sleep(3);
 
-    const todo = await prisma.tODO.findFirst({ where: { id } });
+    const todo = await prisma.todo.findFirst({ where: { id } });
 
     if (!todo) {
         throw `Todo con id ${id} no encontrado`
     }
-    const updateTodo = await prisma.tODO.update({ where: { id }, data: { complete } })
+    const updateTodo = await prisma.todo.update({ where: { id }, data: { complete } })
     revalidatePath('/dashboard/server-todos');
     return updateTodo;
 }
@@ -29,7 +29,7 @@ export const toggleTodo = async (id: string, complete: boolean): Promise<TODO> =
 export const addTodo = async (description: string) => {
 
     try {
-        const todo = await prisma.tODO.create({ data: { description } });
+        const todo = await prisma.todo.create({ data: { description } });
         revalidatePath('/dashboard/server-todos')
 
         return todo;
@@ -47,7 +47,7 @@ export const deteleCompleted = async (): Promise<void> => {
 
     try {
 
-        let data = await prisma.tODO.deleteMany({
+        let data = await prisma.todo.deleteMany({
             where: {
                 complete: true,
             }
@@ -59,7 +59,7 @@ export const deteleCompleted = async (): Promise<void> => {
         console.log(`Error to delete completes todos`)
     }
 
-    let data = await prisma.tODO.deleteMany({
+    let data = await prisma.todo.deleteMany({
         where: {
             complete: true,
         }

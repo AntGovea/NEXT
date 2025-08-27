@@ -25,7 +25,7 @@ export async function GET(request: Request) {
 
 
 
-        let todos = await prisma.tODO.findMany({
+        let todos = await prisma.todo.findMany({
             take,
             skip,
         });
@@ -54,7 +54,7 @@ export async function POST(request: Request) {
         });
 
         let { description, complete } = await postSchema.validate(await request.json());
-        let data = await prisma.tODO.create({
+        let data = await prisma.todo.create({
             data: {
                 description,
                 complete,
@@ -80,7 +80,7 @@ export async function DELETE(request: Request) {
         // });
 
         // let { todoId } = await deleteSchema.validate(await request.json());
-        let data = await prisma.tODO.deleteMany({
+        let data = await prisma.todo.deleteMany({
             where: {
                 complete: true,
             }

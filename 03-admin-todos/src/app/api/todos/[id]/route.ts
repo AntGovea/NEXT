@@ -20,7 +20,7 @@ const putSchema = yup.object({
 //Functions
 const getTodo = async (id: string) => {
 
-    return await prisma.tODO.findFirst({ where: { id } });
+    return await prisma.todo.findFirst({ where: { id } });
 
 }
 export async function GET(request: Request, { params }: Segments) {
@@ -64,7 +64,7 @@ export async function PUT(request: Request, { params }: Segments) {
         }
 
         let { complete, description, ...rest } = await putSchema.validate(await request.json());
-        const updatedTodo = await prisma.tODO.update(
+        const updatedTodo = await prisma.todo.update(
             {
                 where: { id },
                 data: {

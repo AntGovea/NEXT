@@ -19,13 +19,14 @@ export const signInEmailPassword = async (email: string, password: string) => {
 
         console.log('usuario nuevo creado')
         console.log(dbUser)
-
-        if (!bcrypt.compareSync(password, dbUser.password ?? '')) {
-            return null;
-        }
-        console.log('todo correcto , validacion aceptada')
-        return user;
+        return dbUser;
     }
+
+    if (!bcrypt.compareSync(password, password ?? '')) {
+        return null;
+    }
+    console.log('todo correcto , validacion aceptada')
+    return user;
 }
 
 
